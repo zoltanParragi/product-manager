@@ -82,7 +82,7 @@ class ProductsController extends Controller
             $request->image->move(public_path('images'), $imageName);
             $validated["image"] = $imageName;
             
-            Product::where('id', $request->id)->update(['name' => $validated["name"], 'category_id' => $validated["category"], 'description' => $validated["description"], 'price' => $validated["price"],  'image' => $validated["image"]]);
+            Product::where('id', $request->id)->update(['name' => $validated["name"], 'category_id' => $validated["category_id"], 'description' => $validated["description"], 'price' => $validated["price"],  'image' => $validated["image"]]);
 
             $products = Product::get();
             return redirect('/products')->with('products', $products);

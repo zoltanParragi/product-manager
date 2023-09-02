@@ -21,7 +21,7 @@
 
         <div class="row justify-content-around mt-4 mb-4">
             @foreach ($products as $product)
-                <div class="card m-3" style="width: 18rem;">
+                <div class="card m-3 p-0" style="width: 18rem;">
                     <img src="/images/{{ $product->image }}" class="card-img-top" alt={{ $product->name }}>
                     <div class="card-body">
                         <h4 class="card-title fw-bold">{{ $product->name }}</h4>
